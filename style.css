@@ -38,17 +38,41 @@ body{
 .link_wrapper a {
     text-decoration: none;
 }
+.ul_wrapper{
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.ul_wrapper:hover .down{
+    display: block;
+}
+.down .box{
+    width: 100%;
+    padding: 15px 0;
+    /* background-color: darkgray; */
+}
+.down .box:hover{
+   opacity: 50%; 
+}
+.down{
+    display: none;
+    position: absolute;
+    top:50px;
+    text-align: center;
+}
 .ul_wrapper ul{
     display: flex;
     gap: 40px;
+    position: absolute;
+    left: 0;
 }
 .ul_wrapper li {
     list-style: none;
 }
-.ul_wrapper ul :hover{
+.ul_wrapper ul:first-child:hover{
     cursor: pointer;
-    background-color: black;
-    color: white;
 }
 .nav_wrapper{
     background-color: #FAFBFD70;
@@ -56,6 +80,7 @@ body{
     justify-content: space-between;
     align-items: center;
     gap: 50px ;
+    position: relative;
     border: 2px ;
 }
 .h1_wrapper img {
@@ -96,10 +121,13 @@ img{
 
 }
 .border_wrapper .box{
-    width: 160px;
+    width: 170px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     text-align: center;
+}
+.border_wrapper .box p {
+    width: 100px;
 }
